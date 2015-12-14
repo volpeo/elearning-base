@@ -1,0 +1,13 @@
+<h2>
+  <%= @chapter.name %>
+</h2>
+
+<ul class="list-unstyled">
+<% @chapter.items.each do |item| %>
+  <li>
+    <h3><%= link_to item.name, [@course, @chapter, item] %></h3>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to "< back", @chapter.course %>

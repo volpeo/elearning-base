@@ -1,0 +1,9 @@
+<h2><%= @course.name %></h2>
+
+<ul class="list-unstyled">
+<% @course.chapters.each do |chapter| %>
+  <li>
+    <h3><%= link_to chapter.name, [@course, chapter] %></h3>
+  </li>
+<% end %>
+</ul>
