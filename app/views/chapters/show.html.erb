@@ -5,7 +5,10 @@
 <ul class="list-unstyled">
 <% @chapter.items.each do |item| %>
   <li>
-    <h3><%= link_to item.name, [@course, @chapter, item] %></h3>
+    <h3>
+      <%= link_to item.name, [@course, @chapter, item] %>
+      <small>(<%= item.actable_type %>)</small>
+    </h3>
   </li>
 <% end %>
 </ul>

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'courses#index'
   devise_for :users
 
-  resources :courses, only: [:index, :show], path: "" do # => TODO: friendly-id
-    resources :chapters, only: [:show], path: "chapter" do # => TODO: add simply the name
+  resources :courses, only: [:show], path: "" do # => TODO: friendly-id
+    resources :chapters, only: [:show], path: "" do # => TODO: add simply the name
       resources :items, only: [:show], path: "" # => friendly-id
     end
   end
