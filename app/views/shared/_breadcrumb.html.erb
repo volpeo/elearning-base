@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+  <% if @course %>
+    <li>
+      <%= link_to @course.name, @course %>
+    </li>
+    <% if @chapter %>
+      <li>
+        <%= link_to @chapter.name, [@course, @chapter] %>
+      </li>
+      <% if @item %>
+        <li>
+          <%= link_to @item.name, [@course, @chapter, @item] %>
+        </li>
+      <% end %>
+    <% end %>
+  <% end %>
+</ol>
